@@ -67,3 +67,5 @@ class Computer
 end
 
 # 【覆写 method_missing 的时候应该覆写 respond_to_missing？方法】
+
+# 【动态代理】
