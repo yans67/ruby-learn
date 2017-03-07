@@ -40,12 +40,20 @@
 # puts M.constants(false)
 
 #【细化（打开类的改善方案）】
-module StringExtensions
-  refine String do
-    def to_alphanumeric
-      puts gsub(/[^\w\s]/,'')
-    end
-  end
-end
-using StringExtensions
-"abc sadf ,  dasf".to_alphanumeric
+# module StringExtensions
+#   refine String do
+#     def to_alphanumeric
+#       puts gsub(/[^\w\s]/,'')
+#     end
+#   end
+# end
+# using StringExtensions
+# "abc sadf ,  dasf".to_alphanumeric
+
+
+#【Ghee 的例子】
+require "ghee"
+gh = Ghee.basic_auth("yans67","huang2009")
+all_gists = gh.users("yans67").gists
+a_gist = all_gists[5]
+puts a_gist
