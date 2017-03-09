@@ -8,4 +8,5 @@ class Assistant
   def check_mail
     puts "#{name} "
   end
+  
 end
